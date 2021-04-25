@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
-import useBlockNumber from "./useBlockNumber";
+import { useEffect, useRef } from 'react';
+
+import useBlockNumber from './useBlockNumber';
 
 export default function useKeepSWRDataLiveAsBlocksArrive(
-  mutate: () => Promise<any>
+  mutate: () => Promise<any>,
 ) {
   // because we don't care about the referential identity of mutate, just bind it to a ref
   const mutateRef = useRef(mutate);
